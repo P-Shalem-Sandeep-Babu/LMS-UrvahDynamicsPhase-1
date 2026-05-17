@@ -1,0 +1,8 @@
+{
+  "name": "Urvah Dynamics LMS",
+  "description": "Enterprise-level frontend architecture for a modern AI-powered Learning Management System.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
