@@ -12,7 +12,7 @@ const data = [
 
 export const Stats = () => {
   return (
-    <section id="stats" className="py-32 px-6 md:px-10 border-t border-white/5 bg-[#050505] relative overflow-hidden">
+    <section id="stats" className="py-32 px-6 md:px-10 border-t border-border/50 bg-background relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
       
       <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10 max-w-6xl mx-auto">
@@ -21,18 +21,18 @@ export const Stats = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter uppercase text-white mb-6">Global Scale <br/><span className="text-primary text-5xl md:text-7xl">Metrics</span></h2>
-          <p className="text-white/50 font-mono text-sm leading-relaxed mb-12 max-w-md">
+          <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter uppercase text-foreground mb-6">Global Scale <br/><span className="text-primary text-5xl md:text-7xl">Metrics</span></h2>
+          <p className="text-muted-foreground font-mono text-sm leading-relaxed mb-12 max-w-md">
             Our infrastructure powers continuous learning across 12 timezones, maintaining 99.99% uptime while serving millions of automated evaluations daily.
           </p>
 
           <div className="grid grid-cols-2 gap-8">
-            <div className="border-l border-white/20 pl-4 py-2">
-              <div className="text-4xl font-mono font-bold text-white mb-1">10M+</div>
+            <div className="border-l border-border/80 pl-4 py-2">
+              <div className="text-4xl font-mono font-bold text-foreground mb-1">10M+</div>
               <div className="text-[10px] font-bold uppercase tracking-widest text-primary">Lines of code graded</div>
             </div>
-            <div className="border-l border-white/20 pl-4 py-2">
-              <div className="text-4xl font-mono font-bold text-white mb-1">94%</div>
+            <div className="border-l border-border/80 pl-4 py-2">
+              <div className="text-4xl font-mono font-bold text-foreground mb-1">94%</div>
               <div className="text-[10px] font-bold uppercase tracking-widest text-primary">Cohort Completion Target</div>
             </div>
           </div>
@@ -42,10 +42,10 @@ export const Stats = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="border border-white/10 bg-[#080808] p-8 relative"
+          className="border border-border bg-card p-8 relative"
         >
-           <div className="flex justify-between items-center mb-8 border-b border-white/10 pb-4">
-             <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">Engagement Trajectory</span>
+           <div className="flex justify-between items-center mb-8 border-b border-border pb-4">
+             <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Engagement Trajectory</span>
              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
            </div>
            <div className="h-[250px] w-full">

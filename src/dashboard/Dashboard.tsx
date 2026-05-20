@@ -8,6 +8,7 @@ import { StudentDashboard } from "./views/student/StudentDashboard";
 import { AdminDashboard } from "./views/admin/AdminDashboard";
 import { FacultyDashboard } from "./views/faculty/FacultyDashboard";
 import { TrainerDashboard } from "./views/trainer/TrainerDashboard";
+import { LMS_CONFIG } from "../config/constants";
 
 export const Dashboard = () => {
   const { user } = useAuth();
@@ -43,14 +44,14 @@ export const Dashboard = () => {
           <h1 className="text-4xl md:text-5xl font-black italic tracking-tighter uppercase leading-none text-foreground">
             {user.role === 'admin' ? 'System Performance' : 'Learning Dashboard'}
           </h1>
-          <p className="text-white/40 font-mono text-xs uppercase tracking-widest">
-            Welcome back, {user.name} — LMS v2.4.1 Active
+          <p className="text-muted-foreground/80 font-mono text-xs uppercase tracking-widest">
+            Welcome back, {user.name} — LMS v{LMS_CONFIG.VERSION} Active
           </p>
         </motion.div>
 
         <div className="flex gap-2">
           <button className="px-4 py-2 bg-foreground text-background text-[10px] font-black uppercase tracking-widest hover:bg-white/80 transition-colors">Export Logs</button>
-          <button className="px-4 py-2 border border-white/20 text-foreground text-[10px] font-black uppercase tracking-widest hover:bg-white/5 transition-colors">Refresh Sync</button>
+          <button className="px-4 py-2 border border-border/80 text-foreground text-[10px] font-black uppercase tracking-widest hover:bg-foreground/5 transition-colors">Refresh Sync</button>
         </div>
       </div>
 

@@ -19,20 +19,20 @@ export const AIFloatingWidget = () => {
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            className="mb-4 w-80 bg-[#0a0a0a] border border-white/10 shadow-2xl flex flex-col overflow-hidden"
+            className="mb-4 w-80 bg-card border border-border shadow-2xl flex flex-col overflow-hidden"
           >
-            <div className="bg-primary/10 border-b border-white/10 p-3 flex justify-between items-center">
+            <div className="bg-primary/10 border-b border-border p-3 flex justify-between items-center">
                <div className="flex items-center gap-2">
                  <BrainCircuit className="w-4 h-4 text-primary" />
                  <span className="text-[10px] font-bold uppercase tracking-widest text-primary">System Oracle</span>
                </div>
-               <button onClick={() => setIsOpen(false)} className="text-white/50 hover:text-white">
+               <button onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground">
                  <X className="w-4 h-4" />
                </button>
             </div>
             
             <div className="p-4 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
-               <p className="text-xs font-mono text-white/80 leading-relaxed max-w-[250px]">
+               <p className="text-xs font-mono text-foreground/80 leading-relaxed max-w-[250px]">
                  I noticed you are browsing. Do you need cognitive assistance or performance analysis?
                </p>
                

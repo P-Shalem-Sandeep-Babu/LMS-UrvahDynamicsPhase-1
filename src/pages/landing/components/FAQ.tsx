@@ -22,9 +22,9 @@ const faqs = [
 
 export const FAQ = () => {
   return (
-    <section className="py-24 px-6 md:px-10 bg-[#050505] border-t border-white/5">
+    <section className="py-24 px-6 md:px-10 bg-background border-t border-border/50">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter uppercase text-white mb-12">Technical Inquiries</h2>
+        <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter uppercase text-foreground mb-12">Technical Inquiries</h2>
         
         <div className="space-y-4">
           {faqs.map((faq, i) => (
@@ -33,14 +33,14 @@ export const FAQ = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="border border-white/10 group bg-white/[0.02]"
+              className="border border-border group bg-white/[0.02]"
             >
               <details className="p-6 cursor-pointer marker:content-['']">
-                <summary className="flex items-center justify-between text-sm md:text-base font-bold uppercase tracking-widest text-white/80 group-hover:text-white transition-colors">
+                <summary className="flex items-center justify-between text-sm md:text-base font-bold uppercase tracking-widest text-foreground/80 group-hover:text-foreground transition-colors">
                   {faq.q}
                   <Plus className="w-5 h-5 text-primary" />
                 </summary>
-                <div className="pt-4 mt-4 border-t border-white/10 text-sm font-mono text-white/50 leading-relaxed">
+                <div className="pt-4 mt-4 border-t border-border text-sm font-mono text-muted-foreground leading-relaxed">
                   {faq.a}
                 </div>
               </details>

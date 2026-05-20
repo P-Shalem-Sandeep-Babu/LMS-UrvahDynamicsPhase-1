@@ -9,11 +9,11 @@ export const DiscussionBoard = () => {
   return (
     <div className="max-w-[1600px] mx-auto w-full flex flex-col gap-6 pb-12">
       {/* Header */}
-      <div className="border-b border-white/10 pb-6 mb-2">
+      <div className="border-b border-border pb-6 mb-2">
          <h1 className="text-4xl md:text-5xl font-black italic tracking-tighter uppercase leading-none text-foreground flex items-center gap-4">
            <MessageSquare className="w-8 h-8 md:w-10 md:h-10 text-primary" /> Global Matrix
          </h1>
-         <p className="text-white/40 font-mono text-xs uppercase tracking-widest mt-2">
+         <p className="text-muted-foreground/80 font-mono text-xs uppercase tracking-widest mt-2">
            Peer-to-Peer Communication & Knowledge Exchange Subsystem
          </p>
       </div>

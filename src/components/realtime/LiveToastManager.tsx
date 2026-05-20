@@ -52,7 +52,7 @@ export const LiveToastManager = () => {
       case "rank": return <Trophy className="w-4 h-4 text-yellow-500" />;
       case "system": return <Zap className="w-4 h-4 text-primary" />;
       case "contest": return <Terminal className="w-4 h-4 text-red-500" />;
-      default: return <AlertTriangle className="w-4 h-4 text-white" />;
+      default: return <AlertTriangle className="w-4 h-4 text-foreground" />;
     }
   };
 
@@ -62,7 +62,7 @@ export const LiveToastManager = () => {
       case "rank": return "border-yellow-500/30";
       case "system": return "border-primary/30";
       case "contest": return "border-red-500/30";
-      default: return "border-white/20";
+      default: return "border-border/80";
     }
   };
 
@@ -75,16 +75,16 @@ export const LiveToastManager = () => {
             initial={{ opacity: 0, x: -20, scale: 0.9 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: -20, scale: 0.9 }}
-            className={`w-72 bg-[#050505] border shadow-2xl p-3 flex gap-3 items-start pointer-events-auto ${getBorderColor(toast.type)}`}
+            className={`w-72 bg-background border shadow-2xl p-3 flex gap-3 items-start pointer-events-auto ${getBorderColor(toast.type)}`}
           >
-            <div className={`p-1.5 rounded-none border ${getBorderColor(toast.type)} bg-white/5`}>
+            <div className={`p-1.5 rounded-none border ${getBorderColor(toast.type)} bg-foreground/5`}>
               {getIcon(toast.type)}
             </div>
             <div className="flex flex-col gap-1">
                <h4 className={`text-[10px] font-bold uppercase tracking-widest ${toast.type === 'submission' ? 'text-green-500' : toast.type === 'rank' ? 'text-yellow-500' : toast.type === 'system' ? 'text-primary' : 'text-red-500'}`}>
                  {toast.title}
                </h4>
-               <p className="text-xs font-mono text-white/70 leading-snug">
+               <p className="text-xs font-mono text-foreground/70 leading-snug">
                  {toast.message}
                </p>
             </div>

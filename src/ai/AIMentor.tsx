@@ -7,7 +7,7 @@ import { LearningRoadmap } from "./components/LearningRoadmap";
 export const AIMentor = () => {
   return (
     <div className="flex flex-col gap-6 pb-8 h-[calc(100vh-100px)]">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-6 mb-2 shrink-0">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-border pb-6 mb-2 shrink-0">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -16,7 +16,7 @@ export const AIMentor = () => {
           <h1 className="text-4xl md:text-5xl font-black italic tracking-tighter uppercase leading-none text-foreground flex items-center gap-4">
             <BrainCircuit className="w-8 h-8 md:w-10 md:h-10 text-primary" /> System Oracle
           </h1>
-          <p className="text-white/40 font-mono text-xs uppercase tracking-widest">
+          <p className="text-muted-foreground/80 font-mono text-xs uppercase tracking-widest">
             Neural Guidance & Personalized Pathfinding
           </p>
         </motion.div>
@@ -39,7 +39,7 @@ export const AIMentor = () => {
       </div>
 
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-6 min-h-0">
-        <div className="lg:col-span-2 border border-white/10 bg-[#080808] flex flex-col relative overflow-hidden">
+        <div className="lg:col-span-2 border border-border bg-card flex flex-col relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] pointer-events-none" />
           <ChatInterface />
         </div>

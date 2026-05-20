@@ -6,40 +6,56 @@ import {
   Users,
   Settings,
   MessageSquare,
-  ClipboardList,
   GraduationCap,
   Bell,
   Shield,
-  Activity,
   Award,
-  BrainCircuit
+  BrainCircuit,
+  Building2,
+  Terminal
 } from "lucide-react";
 import { Role } from "../data/mock";
+
+import { Permission, hasPermission } from "../config/roles";
 
 export interface NavItem {
   title: string;
   href: string;
   icon: any;
   roles: Role[];
+  permissions?: Permission[];
 }
 
 export const navigationContext: NavItem[] = [
   { title: "Dashboard", href: "/dashboard", icon: LayoutDashboard, roles: ["admin", "student", "faculty", "trainer"] },
-  { title: "System Oracle", href: "/mentor", icon: BrainCircuit, roles: ["student"] },
+  { title: "CW Management", href: "/admin/cw", icon: BookOpen, roles: ["admin"] },
+  { title: "My CW", href: "/student/cw", icon: BookOpen, roles: ["student"] },
+  { title: "CW Reviews", href: "/trainer/cw", icon: BookOpen, roles: ["trainer"] },
+  { title: "Practice IDE", href: "/coding/practice", icon: Terminal, roles: ["student", "trainer"] },
   { title: "Algorithm Vault", href: "/coding/problems", icon: Code, roles: ["student", "faculty", "trainer"] },
   { title: "Tournaments", href: "/coding/contests", icon: Award, roles: ["student"] },
-  { title: "Analytics", href: "/analytics", icon: LineChart, roles: ["admin", "faculty", "trainer"] },
-  { title: "Coding Analytics", href: "/coding/analytics", icon: LineChart, roles: ["student"] },
-  { title: "Students", href: "/students", icon: Users, roles: ["admin", "faculty", "trainer"] },
-  { title: "Peer Review", href: "/peer-review", icon: ClipboardList, roles: ["student", "faculty"] },
+  { title: "Combat Profile", href: "/gamification", icon: Award, roles: ["student"] },
+  { title: "Analytics", href: "/analytics", icon: LineChart, roles: ["admin", "faculty", "trainer"], permissions: [Permission.VIEW_GLOBAL_ANALYTICS] },
+  { title: "Coding Analytics", href: "/coding/analytics", icon: LineChart, roles: ["student"], permissions: [Permission.VIEW_OWN_ANALYTICS] },
+  { title: "Batches", href: "/batches", icon: Users, roles: ["admin", "faculty", "trainer"], permissions: [Permission.MANAGE_BATCHES] },
+  { title: "Colleges", href: "/admin/colleges", icon: Building2, roles: ["admin"], permissions: [Permission.MANAGE_COLLEGES] },
   { title: "Discussions", href: "/discussions", icon: MessageSquare, roles: ["student", "faculty", "trainer"] },
-  { title: "System Health", href: "/monitoring", icon: Activity, roles: ["admin"] },
-  { title: "Faculty Management", href: "/faculty-mgmt", icon: GraduationCap, roles: ["admin"] },
   { title: "Leaderboard", href: "/leaderboard", icon: Award, roles: ["student"] },
-  { title: "Admin Panel", href: "/admin-settings", icon: Shield, roles: ["admin"] },
-  { title: "Settings", href: "/settings", icon: Settings, roles: ["admin", "student", "faculty", "trainer"] },
+  { title: "Admin Panel", href: "/admin-settings", icon: Shield, roles: ["admin"], permissions: [Permission.MANAGE_GLOBAL_SETTINGS] }
 ];
 
 export const getNavigationByRole = (role: Role) => {
-  return navigationContext.filter(item => item.roles.includes(role));
+  return navigationContext.filter(item => {
+    // Check if the role matches
+    if (!item.roles.includes(role)) {
+      return false;
+    }
+    // Check permissions if specified
+    if (item.permissions && item.permissions.length > 0) {
+      if (!item.permissions.every(perm => hasPermission(role, perm))) {
+        return false;
+      }
+    }
+    return true;
+  });
 };

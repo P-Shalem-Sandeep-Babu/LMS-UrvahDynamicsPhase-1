@@ -31,17 +31,17 @@ export const StatsGrid = () => {
            initial={{ opacity: 0, y: 20 }}
            animate={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.4, delay: i * 0.1 }}
-           className="bg-white/[0.03] border border-white/10 p-6 rounded-none relative overflow-hidden group hover:bg-white/[0.05] transition-colors"
+           className="bg-white/[0.03] border border-border p-6 rounded-none relative overflow-hidden group hover:bg-white/[0.05] transition-colors"
          >
              {stat.live && (
                <div className="absolute top-0 right-0 px-2 py-1 bg-primary text-black text-[8px] font-black uppercase tracking-tighter">Live</div>
              )}
-             <span className="text-[10px] uppercase tracking-widest text-white/30 block mb-4 flex justify-between items-center">
+             <span className="text-[10px] uppercase tracking-widest text-muted-foreground/60 block mb-4 flex justify-between items-center">
                  {stat.title}
                  <stat.icon className="w-4 h-4 opacity-30 group-hover:opacity-100 transition-opacity" />
              </span>
              <div className="text-4xl lg:text-5xl font-mono font-bold tracking-tighter">{stat.value}</div>
-             <div className="mt-4 flex items-center gap-2 border-t border-white/5 pt-4">
+             <div className="mt-4 flex items-center gap-2 border-t border-border/50 pt-4">
                <span className={`text-[9px] font-bold tracking-widest uppercase ${stat.variant === 'destructive' ? 'text-red-400' : 'text-primary'}`}>
                   {stat.trend}
                </span>

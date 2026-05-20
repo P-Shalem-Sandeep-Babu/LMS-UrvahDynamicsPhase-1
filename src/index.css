@@ -55,7 +55,7 @@
     --card-foreground: #e5e5e5;
     --popover: #080808;
     --popover-foreground: #e5e5e5;
-    --primary: #F27D26;
+    --primary: #39ff14;
     --primary-foreground: #000000;
     --secondary: rgba(255, 255, 255, 0.05);
     --secondary-foreground: #e5e5e5;
@@ -66,21 +66,54 @@
     --destructive: #dc2626;
     --border: rgba(255, 255, 255, 0.1);
     --input: rgba(255, 255, 255, 0.1);
-    --ring: rgba(242, 125, 38, 0.5);
-    --chart-1: #F27D26;
-    --chart-2: #ffc048;
+    --ring: rgba(57, 255, 20, 0.5);
+    --chart-1: #39ff14;
+    --chart-2: #00cc44;
     --chart-3: #ffffff;
     --chart-4: #a3a3a3;
     --chart-5: #525252;
     --radius: 0.125rem;
     --sidebar: #080808;
     --sidebar-foreground: #e5e5e5;
-    --sidebar-primary: #F27D26;
+    --sidebar-primary: #39ff14;
     --sidebar-primary-foreground: #000000;
     --sidebar-accent: rgba(255, 255, 255, 0.05);
     --sidebar-accent-foreground: #e5e5e5;
     --sidebar-border: rgba(255, 255, 255, 0.1);
-    --sidebar-ring: rgba(242, 125, 38, 0.5);
+    --sidebar-ring: rgba(57, 255, 20, 0.5);
+}
+
+.light {
+    --background: #f6f6f8;
+    --foreground: #111111;
+    --card: #ffffff;
+    --card-foreground: #111111;
+    --popover: #ffffff;
+    --popover-foreground: #111111;
+    --primary: #00c853; /* Deep neon green for premium contrast on light */
+    --primary-foreground: #ffffff;
+    --secondary: #eaeaef;
+    --secondary-foreground: #111111;
+    --muted: #f4f4f5;
+    --muted-foreground: #6b7280;
+    --accent: #f4f4f5;
+    --accent-foreground: #111111;
+    --destructive: #ef4444;
+    --border: rgba(0, 0, 0, 0.08);
+    --input: rgba(0, 0, 0, 0.08);
+    --ring: rgba(0, 200, 83, 0.3);
+    --sidebar: #ffffff;
+    --sidebar-foreground: #111111;
+    --sidebar-primary: #00c853;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #f4f4f5;
+    --sidebar-accent-foreground: #111111;
+    --sidebar-border: rgba(0, 0, 0, 0.08);
+    --chart-1: #00c853;
+    --chart-2: #00e676;
+    --chart-3: #111111;
+    --chart-4: #9ca3af;
+    --chart-5: #4b5563;
 }
 
 @layer base {
@@ -97,6 +130,13 @@
 
 /* Custom Utilities for Premium Vibe */
 @layer utilities {
+  .light .bg-card {
+    @apply shadow-[0_4px_24px_-4px_rgba(0,0,0,0.04)] border border-border/60 transition-shadow duration-300;
+  }
+  .light .bg-card:hover {
+    @apply shadow-[0_8px_30px_-6px_rgba(0,0,0,0.08)];
+  }
+  
   .glass-panel {
     @apply bg-background/60 backdrop-blur-xl border border-border/50 shadow-sm;
   }

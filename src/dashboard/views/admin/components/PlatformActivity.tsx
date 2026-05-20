@@ -37,18 +37,18 @@ export const PlatformActivity = () => {
     <motion.div
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="border border-white/10 bg-[#080808] p-6 relative overflow-hidden"
+      className="border border-border bg-card p-6 relative overflow-hidden"
     >
-      <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
-        <h2 className="text-[10px] font-bold uppercase tracking-widest text-white/50 flex items-center gap-2">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-4">
+        <h2 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
           <List className="w-3 h-3" /> Raw Event Stream
         </h2>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="w-full text-left border-collapse">
+      <div className="overflow-x-auto hide-scrollbar custom-scrollbar">
+        <table className="w-full text-left border-collapse min-w-max whitespace-nowrap">
           <thead>
-            <tr className="border-b border-white/10 text-[10px] font-bold uppercase tracking-widest text-white/40">
+            <tr className="border-b border-border text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80">
               <th className="pb-3 font-medium px-4">Event ID</th>
               <th className="pb-3 font-medium px-4">Description</th>
               <th className="pb-3 font-medium px-4">Actor</th>
@@ -56,14 +56,14 @@ export const PlatformActivity = () => {
               <th className="pb-3 font-medium px-4">Status</th>
             </tr>
           </thead>
-          <tbody className="text-xs font-mono text-white/70">
+          <tbody className="text-xs font-mono text-foreground/70">
             {activities.map((act, i) => (
               <tr
                 key={i}
-                className="border-b border-white/5 hover:bg-white/[0.02] transition-colors"
+                className="border-b border-border/50 hover:bg-white/[0.02] transition-colors"
               >
                 <td className="py-4 px-4">{act.id}</td>
-                <td className="py-4 px-4 text-white">{act.event}</td>
+                <td className="py-4 px-4 text-foreground">{act.event}</td>
                 <td className="py-4 px-4">{act.user}</td>
                 <td className="py-4 px-4">{act.time}</td>
                 <td className="py-4 px-4">

@@ -17,12 +17,12 @@ export const PlatformActivityArea = () => {
     <motion.div 
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="border border-white/10 bg-[#080808] p-6 relative overflow-hidden h-[400px] flex flex-col"
+      className="border border-border bg-card p-6 relative overflow-hidden h-[400px] flex flex-col"
     >
       <div className="absolute top-0 left-0 w-64 h-64 bg-blue-500/5 rounded-full blur-[80px] pointer-events-none" />
       
-      <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
-        <h2 className="text-[10px] font-bold uppercase tracking-widest text-white/50 flex items-center gap-2">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-4">
+        <h2 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
            <Server className="w-3 h-3 text-blue-500" /> Platform Infrastructure Analytics
         </h2>
         <div className="flex items-center gap-4 text-[10px] font-mono">

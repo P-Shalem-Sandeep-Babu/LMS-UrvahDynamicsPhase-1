@@ -49,10 +49,10 @@ export const StudentAnalyticsTable = () => {
     <motion.div
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="border border-white/10 bg-[#080808] p-6 relative overflow-hidden flex-1"
+      className="border border-border bg-card p-6 relative overflow-hidden flex-1"
     >
-      <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
-        <h2 className="text-[10px] font-bold uppercase tracking-widest text-white/50 flex items-center gap-2">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-4">
+        <h2 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
           <Users className="w-3 h-3" /> Student Roster Analytics
         </h2>
 
@@ -60,7 +60,7 @@ export const StudentAnalyticsTable = () => {
           <input
             type="text"
             placeholder="SEARCH STUDENT IDS..."
-            className="bg-black border border-white/10 text-[10px] font-mono px-3 py-1 focus:outline-none focus:border-primary/50 text-white w-48"
+            className="bg-background border border-border text-[10px] font-mono px-3 py-1 focus:outline-none focus:border-primary/50 text-foreground w-48"
           />
         </div>
       </div>
@@ -68,7 +68,7 @@ export const StudentAnalyticsTable = () => {
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="border-b border-white/10 text-[10px] font-bold uppercase tracking-widest text-white/40">
+            <tr className="border-b border-border text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80">
               <th className="pb-3 font-medium px-4">ID</th>
               <th className="pb-3 font-medium px-4">Name</th>
               <th className="pb-3 font-medium px-4">Cohort</th>
@@ -78,14 +78,14 @@ export const StudentAnalyticsTable = () => {
               <th className="pb-3 font-medium px-4"></th>
             </tr>
           </thead>
-          <tbody className="text-xs font-mono text-white/70">
+          <tbody className="text-xs font-mono text-foreground/70">
             {students.map((student, i) => (
               <tr
                 key={i}
-                className="border-b border-white/5 hover:bg-white/[0.02] transition-colors"
+                className="border-b border-border/50 hover:bg-white/[0.02] transition-colors"
               >
                 <td className="py-4 px-4">{student.id}</td>
-                <td className="py-4 px-4 text-white font-sans font-bold text-sm">
+                <td className="py-4 px-4 text-foreground font-sans font-bold text-sm">
                   {student.name}
                 </td>
                 <td className="py-4 px-4">{student.cohort}</td>
@@ -105,7 +105,7 @@ export const StudentAnalyticsTable = () => {
                   </span>
                 </td>
                 <td className="py-4 px-4 text-right">
-                  <button className="p-1 hover:bg-white/10 transition-colors text-white/50 hover:text-white">
+                  <button className="p-1 hover:bg-foreground/10 transition-colors text-muted-foreground hover:text-foreground">
                     <MoreHorizontal className="w-4 h-4" />
                   </button>
                 </td>

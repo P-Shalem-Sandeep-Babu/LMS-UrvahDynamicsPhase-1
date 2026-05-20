@@ -7,9 +7,9 @@ export const StudentStats = () => {
       label: "Learning Streak",
       value: "14 Days",
       icon: Flame,
-      color: "text-orange-500",
-      bg: "bg-orange-500/10",
-      border: "border-orange-500/20",
+      color: "text-green-500",
+      bg: "bg-green-500/10",
+      border: "border-green-500/20",
     },
     {
       label: "Current Rank",
@@ -45,17 +45,17 @@ export const StudentStats = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.1 }}
-          className={`p-4 border bg-white/[0.02] border-white/5 relative overflow-hidden group hover:border-white/20 transition-all`}
+          className={`p-4 border bg-white/[0.02] border-border/50 relative overflow-hidden group hover:border-border/80 transition-all`}
         >
           <div className="flex justify-between items-start mb-4">
-            <div className="text-[10px] font-bold uppercase tracking-widest text-white/50 group-hover:text-white/80 transition-colors">
+            <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground group-hover:text-foreground/80 transition-colors">
               {stat.label}
             </div>
             <div className={`p-2 ${stat.bg} ${stat.border} border`}>
               <stat.icon className={`w-4 h-4 ${stat.color}`} />
             </div>
           </div>
-          <div className="text-2xl md:text-3xl font-mono font-bold text-white">
+          <div className="text-2xl md:text-3xl font-mono font-bold text-foreground">
             {stat.value}
           </div>
           <div

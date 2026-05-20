@@ -62,9 +62,9 @@ export const RealtimeSubmissions = () => {
       case "TLE":
         return "text-yellow-500 bg-yellow-500/10 border-yellow-500/20";
       case "MLE":
-        return "text-orange-500 bg-orange-500/10 border-orange-500/20";
+        return "text-green-500 bg-green-500/10 border-green-500/20";
       default:
-        return "text-white/50 bg-white/5 border-white/10";
+        return "text-muted-foreground bg-foreground/5 border-border";
     }
   };
 
@@ -72,10 +72,10 @@ export const RealtimeSubmissions = () => {
     <motion.div
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="border border-white/10 bg-[#080808] p-6 relative overflow-hidden h-full flex flex-col"
+      className="border border-border bg-card p-6 relative overflow-hidden h-full flex flex-col"
     >
-      <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
-        <h2 className="text-[10px] font-bold uppercase tracking-widest text-white/50 flex items-center gap-2">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-4">
+        <h2 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
           <Terminal className="w-3 h-3" /> Live Execution Stream
         </h2>
         <span className="flex h-2 w-2">
@@ -88,13 +88,13 @@ export const RealtimeSubmissions = () => {
         {submissions.map((sub, i) => (
           <div
             key={i}
-            className="p-3 border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-colors flex items-center justify-between group"
+            className="p-3 border border-border/50 bg-white/[0.02] hover:bg-white/[0.04] transition-colors flex items-center justify-between group"
           >
             <div className="flex flex-col gap-1">
-              <div className="text-[10px] font-bold text-white uppercase tracking-tight">
+              <div className="text-[10px] font-bold text-foreground uppercase tracking-tight">
                 {sub.problem}
               </div>
-              <div className="text-[9px] font-mono text-white/40">
+              <div className="text-[9px] font-mono text-muted-foreground/80">
                 @{sub.student} &bull; {sub.lang}
               </div>
             </div>
@@ -105,7 +105,7 @@ export const RealtimeSubmissions = () => {
               >
                 {sub.status}
               </span>
-              <div className="text-[8px] font-mono text-white/30 hidden group-hover:block transition-all">
+              <div className="text-[8px] font-mono text-muted-foreground/60 hidden group-hover:block transition-all">
                 {sub.time} &bull; {sub.mem}
               </div>
             </div>

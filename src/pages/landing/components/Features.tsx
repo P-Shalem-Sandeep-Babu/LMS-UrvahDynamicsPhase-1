@@ -36,10 +36,10 @@ const features = [
 
 export const Features = () => {
   return (
-    <section id="features" className="py-24 px-6 md:px-10 border-t border-white/5 bg-[#050505]">
+    <section id="features" className="py-24 px-6 md:px-10 border-t border-border/50 bg-background">
       <div className="mb-16">
-         <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter uppercase text-white mb-4">Core Architecture</h2>
-         <p className="text-white/40 font-mono text-xs uppercase tracking-widest max-w-2xl">A modular ecosystem designed to eliminate friction in technical education.</p>
+         <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter uppercase text-foreground mb-4">Core Architecture</h2>
+         <p className="text-muted-foreground/80 font-mono text-xs uppercase tracking-widest max-w-2xl">A modular ecosystem designed to eliminate friction in technical education.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -50,14 +50,14 @@ export const Features = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="group bg-white/[0.02] border border-white/10 p-8 hover:bg-white/[0.05] transition-colors relative overflow-hidden"
+            className="group bg-white/[0.02] border border-border p-8 hover:bg-white/[0.05] transition-colors relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity" />
-            <div className="mb-6 inline-flex p-3 bg-white/5 border border-white/10 group-hover:border-primary/50 transition-colors">
+            <div className="mb-6 inline-flex p-3 bg-foreground/5 border border-border group-hover:border-primary/50 transition-colors">
                <feature.icon className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-lg font-bold uppercase tracking-tight mb-3 text-white">{feature.title}</h3>
-            <p className="text-sm text-white/50 leading-relaxed font-mono">{feature.desc}</p>
+            <h3 className="text-lg font-bold uppercase tracking-tight mb-3 text-foreground">{feature.title}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed font-mono">{feature.desc}</p>
           </motion.div>
         ))}
       </div>

@@ -23,11 +23,11 @@ export const StudentWeaknessAnalysis = () => {
     <motion.div
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="border border-white/10 bg-[#080808] p-6 relative overflow-hidden flex-1 flex flex-col"
+      className="border border-border bg-card p-6 relative overflow-hidden flex-1 flex flex-col"
     >
       <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-[60px] pointer-events-none" />
 
-      <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-4">
         <h2 className="text-[10px] font-bold uppercase tracking-widest text-primary flex items-center gap-2">
           <BrainCircuit className="w-3 h-3" /> AI Insight: Class Weaknesses
         </h2>
@@ -62,11 +62,11 @@ export const StudentWeaknessAnalysis = () => {
         </ResponsiveContainer>
       </div>
 
-      <div className="mt-4 border-t border-white/10 pt-4 max-w-sm">
-        <p className="text-[10px] font-mono text-white/70 leading-relaxed uppercase">
+      <div className="mt-4 border-t border-border pt-4 max-w-sm">
+        <p className="text-[10px] font-mono text-foreground/70 leading-relaxed uppercase">
           <span className="font-bold text-primary">Insight:</span> The cohort is
           underperforming in{" "}
-          <span className="text-white">Dynamic Programming (DP)</span>.
+          <span className="text-foreground">Dynamic Programming (DP)</span>.
           Generating recommended follow-up exercises to assign.
         </p>
         <button className="mt-3 px-3 py-1.5 border border-primary/30 text-primary text-[10px] font-bold uppercase hover:bg-primary hover:text-black transition-colors w-full tracking-widest">

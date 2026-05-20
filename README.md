@@ -1,71 +1,61 @@
 # Urvah Dynamics LMS
 
-Urvah Dynamics is a modern, feature-rich Learning Management System (LMS) built with React, Vite, and Tailwind CSS. It is designed to provide a comprehensive educational platform that integrates interactive learning, an advanced coding workspace, AI mentorship, and detailed analytics.
+A modern, production-grade Learning Management System (LMS) built with React and Vite. Urvah Dynamics LMS provides an immersive, interactive learning experience with built-in code execution, AI-powered features, and comprehensive analytics.
 
-## Key Features
+## Features
 
-- **Authentication System**: Secure user authentication including Login, Signup, Password Recovery, and OTP verification.
-- **Role-Based Access**: Specialized interfaces and routing for Students, Faculty, and Administrators.
-- **Interactive Dashboard**: A centralized hub for users to track their progress, recent activities, and upcoming assignments.
-- **Integrated Coding Workspace**:
-  - Embedded **Monaco Editor** for writing and testing code directly in the browser.
-  - Problem-solving environments and competitive coding contests.
-  - Dedicated coding analytics and contest leaderboards.
-- **AI Mentor Integration**: Powered by Google GenAI to provide intelligent assistance, answer queries, and guide students through complex topics.
-- **Global & Course Analytics**: Comprehensive data visualization using Recharts to monitor engagement and performance.
-- **Community Discussions**: Discussion boards and detailed threads to foster peer-to-peer learning and collaboration.
-- **Gamification**: Global leaderboards to encourage healthy competition among learners.
-- **Administration & Faculty Tools**: Manage courses, monitor students, and configure application settings seamlessly.
+- **Modern UI/UX**: Built with React 19, Tailwind CSS v4, and Framer Motion for a sleek, responsive, and animated user interface.
+- **Interactive Code Environment**: Integrated Monaco Editor for in-browser coding exercises and assessments.
+- **AI Integration**: Powered by Google's Gemini AI (`@google/genai`) for intelligent tutoring and assistance.
+- **Rich Content Rendering**: Support for Markdown with GitHub Flavored Markdown (GFM) and syntax highlighting.
+- **Comprehensive Analytics**: Interactive dashboards and progress tracking using Recharts.
+- **Robust Routing**: Client-side routing managed by React Router DOM v7.
 
 ## Tech Stack
 
-- **Frontend Core**: React 19, Vite, TypeScript
-- **Routing**: React Router DOM
-- **Styling & UI**: Tailwind CSS v4, Shadcn UI, Framer Motion
-- **Code Editor**: Monaco Editor (`@monaco-editor/react`)
-- **Data Visualization**: Recharts
-- **AI Capabilities**: Google GenAI SDK
+- **Framework**: [React 19](https://react.dev/) + [Vite 6](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components**: Radix UI, Base UI, Shadcn
+- **Animations**: Framer Motion
 - **Icons**: Lucide React
+- **Code Editor**: Monaco Editor
+- **Data Visualization**: Recharts
+- **AI**: Google GenAI SDK
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v18 or newer recommended)
-- npm or yarn package manager
+- [Node.js](https://nodejs.org/) (v20 or higher recommended)
+- npm or yarn
 
 ### Installation
 
-1. **Navigate to the project directory**:
+1. Clone the repository or navigate to the project directory:
    ```bash
    cd urvah-dynamics-lms
    ```
 
-2. **Install dependencies**:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. **Configure Environment Variables**:
-   Create a `.env` or `.env.local` file in the root directory based on the provided `.env.example`:
-   ```env
-   # Required for AI Mentor features
-   GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
-   
-   # Optional: For self-referential links or OAuth
-   APP_URL="http://localhost:3000"
+3. Environment Setup:
+   Copy the example environment file and fill in your keys (e.g., your Gemini API key):
+   ```bash
+   cp .env.example .env.local
    ```
 
-4. **Start the development server**:
+4. Start the development server:
    ```bash
    npm run dev
    ```
-   The application will be running at `http://localhost:3000`.
+   The app will be available at `http://localhost:3000`.
 
-## Available Scripts
+## Scripts
 
 - `npm run dev`: Starts the Vite development server.
-- `npm run build`: Builds the app for production.
-- `npm run preview`: Locally preview the production build.
+- `npm run build`: Builds the application for production.
+- `npm run preview`: Previews the production build locally.
 - `npm run lint`: Runs TypeScript type checking.
-- `npm run clean`: Removes the `dist` directory.

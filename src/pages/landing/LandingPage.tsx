@@ -9,7 +9,7 @@ import { Footer } from "./components/Footer";
 
 export const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-[#050505] text-[#e5e5e5] font-sans selection:bg-primary/30 selection:text-white custom-scrollbar overflow-x-hidden">
+    <div className="min-h-screen bg-background text-[#e5e5e5] font-sans selection:bg-primary/30 selection:text-foreground custom-scrollbar overflow-x-hidden">
       <Navbar />
       <div className="max-w-[1440px] mx-auto">
         <Hero />

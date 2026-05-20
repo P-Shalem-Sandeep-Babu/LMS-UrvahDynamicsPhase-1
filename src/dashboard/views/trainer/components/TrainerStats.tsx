@@ -54,20 +54,20 @@ export const TrainerStats = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.1 }}
-          className={`p-6 border bg-[#080808] border-white/10 relative overflow-hidden group hover:border-white/20 transition-all`}
+          className={`p-6 border bg-card border-border relative overflow-hidden group hover:border-border/80 transition-all`}
         >
           <div className="flex justify-between items-start mb-4">
-            <div className="text-[10px] font-bold uppercase tracking-widest text-white/50 group-hover:text-white/80 transition-colors">
+            <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground group-hover:text-foreground/80 transition-colors">
               {stat.label}
             </div>
             <div className={`p-2 ${stat.bg} ${stat.border} border`}>
               <stat.icon className={`w-4 h-4 ${stat.color}`} />
             </div>
           </div>
-          <div className="text-3xl md:text-4xl font-mono font-bold text-white mb-2">
+          <div className="text-3xl md:text-4xl font-mono font-bold text-foreground mb-2">
             {stat.value}
           </div>
-          <div className="text-[9px] font-bold tracking-widest uppercase text-white/40 border-t border-white/5 pt-2 mt-4">
+          <div className="text-[9px] font-bold tracking-widest uppercase text-muted-foreground/80 border-t border-border/50 pt-2 mt-4">
             {stat.trend}
           </div>
           <div

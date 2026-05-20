@@ -45,7 +45,7 @@ export const VerifyOTP = () => {
     <div className="space-y-8">
       <div>
         <h2 className="text-3xl font-black uppercase tracking-tighter italic mb-2">Access Code</h2>
-        <p className="text-xs font-mono text-white/50 uppercase tracking-widest leading-relaxed">
+        <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest leading-relaxed">
           Enter the 6-digit cryptographic sequence sent to your device.
         </p>
       </div>
@@ -62,7 +62,7 @@ export const VerifyOTP = () => {
               value={digit}
               onChange={(e) => handleOtpChange(i, e.target.value)}
               onKeyDown={(e) => handleKeyDown(i, e)}
-              className="w-12 h-14 bg-white/5 border border-white/10 text-center text-xl font-mono text-white focus:outline-none focus:border-primary/50 transition-colors"
+              className="w-12 h-14 bg-foreground/5 border border-border text-center text-xl font-mono text-foreground focus:outline-none focus:border-primary/50 transition-colors"
             />
           ))}
         </div>
@@ -70,7 +70,7 @@ export const VerifyOTP = () => {
         <button 
           type="submit" 
           disabled={isLoading || otp.join('').length < 6}
-          className="w-full h-12 bg-white text-black text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-primary hover:shadow-[0_0_20px_rgba(242,125,38,0.3)] transition-all disabled:opacity-50 disabled:cursor-not-allowed group"
+          className="w-full h-12 bg-foreground text-black text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-primary hover:shadow-[0_0_20px_rgba(57,255,20,0.3)] transition-all disabled:opacity-50 disabled:cursor-not-allowed group"
         >
           {isLoading ? (
             <><Loader2 className="w-4 h-4 animate-spin" /> Verifying...</>

@@ -13,10 +13,10 @@ export const OnlineUsersWidget = () => {
     <motion.div 
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="border border-white/10 bg-[#080808] p-4 flex flex-col gap-4"
+      className="border border-border bg-card p-4 flex flex-col gap-4"
     >
-      <div className="flex items-center justify-between border-b border-white/10 pb-2">
-         <h3 className="text-[10px] font-bold uppercase tracking-widest text-white/50 flex items-center gap-2">
+      <div className="flex items-center justify-between border-b border-border pb-2">
+         <h3 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
             <Users className="w-3 h-3 text-primary" /> Active Operatives
          </h3>
          <div className="flex items-center gap-2">
@@ -32,10 +32,10 @@ export const OnlineUsersWidget = () => {
         {users.map((user, i) => (
           <div key={i} className="flex justify-between items-center group">
              <div className="flex items-center gap-2">
-                <div className={`w-1.5 h-1.5 rounded-full ${user.status === 'coding' ? 'bg-primary animate-pulse' : user.status === 'contest' ? 'bg-red-500 animate-pulse' : 'bg-white/20'}`} />
-                <span className="text-xs font-mono text-white/80 group-hover:text-white transition-colors">@{user.handle}</span>
+                <div className={`w-1.5 h-1.5 rounded-full ${user.status === 'coding' ? 'bg-primary animate-pulse' : user.status === 'contest' ? 'bg-red-500 animate-pulse' : 'bg-foreground/20'}`} />
+                <span className="text-xs font-mono text-foreground/80 group-hover:text-foreground transition-colors">@{user.handle}</span>
              </div>
-             <span className="text-[9px] font-mono text-white/40 uppercase tracking-widest bg-white/5 px-1.5 py-0.5 border border-white/5">
+             <span className="text-[9px] font-mono text-muted-foreground/80 uppercase tracking-widest bg-foreground/5 px-1.5 py-0.5 border border-border/50">
                {user.location}
              </span>
           </div>

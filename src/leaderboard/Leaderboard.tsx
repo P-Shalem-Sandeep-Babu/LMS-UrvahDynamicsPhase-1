@@ -73,20 +73,20 @@ export const Leaderboard = () => {
 
          {/* Rank 3 */}
          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="order-3">
-            <Card className="glass-card border-none bg-gradient-to-t from-amber-700/20 dark:from-amber-900/40 to-transparent relative overflow-hidden text-center pb-6">
-               <div className="absolute top-0 inset-x-0 h-1 bg-amber-600" />
+            <Card className="glass-card border-none bg-gradient-to-t from-green-700/20 dark:from-green-900/40 to-transparent relative overflow-hidden text-center pb-6">
+               <div className="absolute top-0 inset-x-0 h-1 bg-green-600" />
                <CardHeader className="pt-8">
                   <div className="relative mx-auto w-20 h-20">
                      <Avatar className="w-20 h-20 border-4 border-background shadow-xl">
                         <AvatarImage src={leaderboardData[2].avatar} />
                         <AvatarFallback>MW</AvatarFallback>
                      </Avatar>
-                     <div className="absolute -bottom-3 -right-2 bg-amber-600 text-white w-8 h-8 rounded-full border-2 border-background flex items-center justify-center font-bold text-sm shadow-md">3</div>
+                     <div className="absolute -bottom-3 -right-2 bg-green-600 text-foreground w-8 h-8 rounded-full border-2 border-background flex items-center justify-center font-bold text-sm shadow-md">3</div>
                   </div>
                   <CardTitle className="mt-4">{leaderboardData[2].name}</CardTitle>
                </CardHeader>
                <CardContent>
-                 <div className="font-mono text-2xl font-black text-amber-700 dark:text-amber-500">{leaderboardData[2].score.toLocaleString()}</div>
+                 <div className="font-mono text-2xl font-black text-green-700 dark:text-green-500">{leaderboardData[2].score.toLocaleString()}</div>
                  <p className="text-xs text-muted-foreground uppercase tracking-widest mt-1">Points</p>
                </CardContent>
             </Card>

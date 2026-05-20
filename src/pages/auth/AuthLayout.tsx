@@ -4,9 +4,9 @@ import { BrainCircuit } from "lucide-react";
 
 export const AuthLayout = () => {
   return (
-    <div className="min-h-screen bg-[#050505] flex">
+    <div className="min-h-screen bg-background flex">
       {/* Left side - Branding & Visuals */}
-      <div className="hidden lg:flex w-1/2 relative bg-[#080808] border-r border-white/10 flex-col items-center justify-center p-12 overflow-hidden">
+      <div className="hidden lg:flex w-1/2 relative bg-card border-r border-border flex-col items-center justify-center p-12 overflow-hidden">
         {/* Animated Background Gradients */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <motion.div 
@@ -37,16 +37,16 @@ export const AuthLayout = () => {
             </span>
           </div>
 
-          <h1 className="text-5xl font-black italic tracking-tighter uppercase leading-[0.9] text-white mb-6">
+          <h1 className="text-5xl font-black italic tracking-tighter uppercase leading-[0.9] text-foreground mb-6">
             Enter The <br/>
             <span className="text-primary">Ecosystem</span>
           </h1>
 
-          <p className="text-sm text-white/50 font-mono tracking-tight leading-relaxed mb-12 max-w-md">
+          <p className="text-sm text-muted-foreground font-mono tracking-tight leading-relaxed mb-12 max-w-md">
             Authentication gateway for the enterprise learning management system. Secure access to AI mentorship, predictive analytics, and collaborative coding arenas.
           </p>
 
-          <div className="flex items-center gap-4 text-[10px] font-mono text-white/30 uppercase tracking-widest">
+          <div className="flex items-center gap-4 text-[10px] font-mono text-muted-foreground/60 uppercase tracking-widest">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
               <span>Systems Operational</span>

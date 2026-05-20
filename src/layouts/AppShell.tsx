@@ -3,6 +3,7 @@ import { Sidebar } from "./Sidebar";
 import { Header } from "./Header";
 import { AIFloatingWidget } from "../ai/components/AIFloatingWidget";
 import { LiveToastManager } from "../components/realtime/LiveToastManager";
+import { LMS_CONFIG } from "../config/constants";
 
 export const AppShell = () => {
   return (
@@ -16,11 +17,11 @@ export const AppShell = () => {
               <Outlet />
             </div>
             {/* Footer Meta Bar */}
-            <footer className="h-8 bg-[#0a0a0b] border-t border-white/5 flex items-center justify-between px-10 font-mono text-[8px] text-white/20 uppercase tracking-[0.2em] mt-auto">
+            <footer className="h-8 bg-[#0a0a0b] border-t border-border/50 flex items-center justify-between px-10 font-mono text-[8px] text-white/20 uppercase tracking-[0.2em] mt-auto">
                <div>System Status: All Engines Operational</div>
                <div className="flex gap-8">
                  <span>Architecture: Modular / Vite / TS</span>
-                 <span className="text-white/40">&copy; 2024 Urvah Dynamics Pvt Ltd. All Rights Reserved</span>
+                 <span className="text-muted-foreground/80">&copy; {LMS_CONFIG.YEAR} {LMS_CONFIG.COMPANY_NAME}. All Rights Reserved</span>
                </div>
             </footer>
           </main>

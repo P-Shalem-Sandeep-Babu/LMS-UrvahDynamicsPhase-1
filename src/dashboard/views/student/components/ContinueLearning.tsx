@@ -6,14 +6,14 @@ export const ContinueLearning = () => {
     <motion.div
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="border border-white/10 bg-[#080808] p-6 relative overflow-hidden group"
+      className="border border-border bg-card p-6 relative overflow-hidden group"
     >
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] pointer-events-none" />
 
-      <div className="flex justify-between items-start mb-6 border-b border-white/10 pb-4">
+      <div className="flex justify-between items-start mb-6 border-b border-border pb-4">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-          <h2 className="text-[10px] font-bold uppercase tracking-widest text-white/50">
+          <h2 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
             Active Directive
           </h2>
         </div>
@@ -24,9 +24,9 @@ export const ContinueLearning = () => {
 
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3 relative group/video cursor-pointer">
-          <div className="absolute inset-0 bg-black/60 group-hover/video:bg-black/40 transition-colors flex items-center justify-center border border-white/10 z-10">
-            <div className="w-12 h-12 rounded-full border border-white/20 bg-black/50 backdrop-blur-sm flex items-center justify-center group-hover/video:scale-110 group-hover/video:border-primary/50 transition-all">
-              <Play className="w-4 h-4 text-white group-hover/video:text-primary ml-1" />
+          <div className="absolute inset-0 bg-background/60 group-hover/video:bg-background/40 transition-colors flex items-center justify-center border border-border z-10">
+            <div className="w-12 h-12 rounded-full border border-border/80 bg-background/50 backdrop-blur-sm flex items-center justify-center group-hover/video:scale-110 group-hover/video:border-primary/50 transition-all">
+              <Play className="w-4 h-4 text-foreground group-hover/video:text-primary ml-1" />
             </div>
           </div>
           <img
@@ -34,17 +34,17 @@ export const ContinueLearning = () => {
             alt="Course Thumbnail"
             className="w-full h-32 object-cover grayscale opacity-50 group-hover/video:grayscale-0 group-hover/video:opacity-100 transition-all duration-700"
           />
-          <div className="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 text-[8px] font-mono text-white/70 z-20 border border-white/10">
+          <div className="absolute bottom-2 right-2 bg-background/80 px-2 py-0.5 text-[8px] font-mono text-foreground/70 z-20 border border-border">
             14:20 left
           </div>
         </div>
 
         <div className="md:w-2/3 flex flex-col justify-center space-y-4">
           <div>
-            <h3 className="text-xl font-bold uppercase tracking-tight text-white mb-2 group-hover:text-primary transition-colors">
+            <h3 className="text-xl font-bold uppercase tracking-tight text-foreground mb-2 group-hover:text-primary transition-colors">
               Advanced Recursion Patterns
             </h3>
-            <p className="text-sm font-mono text-white/50 line-clamp-2">
+            <p className="text-sm font-mono text-muted-foreground line-clamp-2">
               Mastering depth-first algorithms using advanced recursion
               patterns. This module covers tree traversal, backtracking, and
               memoization techniques.
@@ -52,18 +52,18 @@ export const ContinueLearning = () => {
           </div>
 
           <div className="space-y-2">
-            <div className="flex justify-between items-center text-[10px] uppercase font-bold tracking-widest text-white/70">
+            <div className="flex justify-between items-center text-[10px] uppercase font-bold tracking-widest text-foreground/70">
               <span>Progress</span>
               <span className="font-mono text-primary">68%</span>
             </div>
-            <div className="h-1.5 w-full bg-white/5 overflow-hidden">
+            <div className="h-1.5 w-full bg-foreground/5 overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: "68%" }}
                 transition={{ duration: 1, delay: 0.5 }}
                 className="h-full bg-primary relative"
               >
-                <div className="absolute inset-0 bg-white/20 w-full animate-[shimmer_2s_infinite]" />
+                <div className="absolute inset-0 bg-foreground/20 w-full animate-[shimmer_2s_infinite]" />
               </motion.div>
             </div>
           </div>

@@ -30,14 +30,14 @@ export const SessionTimeoutModal = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm"
+            className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm"
           />
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <motion.div 
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className="w-full max-w-sm bg-[#080808] border border-white/10 p-6 relative overflow-hidden"
+              className="w-full max-w-sm bg-card border border-border p-6 relative overflow-hidden"
             >
                <div className="absolute top-0 left-0 w-full h-1 bg-red-500" />
                <div className="flex flex-col items-center text-center space-y-4">
@@ -45,15 +45,15 @@ export const SessionTimeoutModal = () => {
                      <AlertCircle className="w-6 h-6 text-red-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-black uppercase tracking-tighter italic text-white">Session Expired</h3>
-                    <p className="text-xs font-mono text-white/50 mt-2">
+                    <h3 className="text-lg font-black uppercase tracking-tighter italic text-foreground">Session Expired</h3>
+                    <p className="text-xs font-mono text-muted-foreground mt-2">
                        For your security, your session has been terminated due to inactivity.
                     </p>
                   </div>
                   <div className="w-full pt-4 space-y-2">
                      <button 
                        onClick={handleReLogin}
-                       className="w-full h-10 bg-primary text-black text-[10px] font-black uppercase tracking-widest hover:bg-white transition-colors"
+                       className="w-full h-10 bg-primary text-black text-[10px] font-black uppercase tracking-widest hover:bg-foreground transition-colors"
                      >
                        Re-Authenticate
                      </button>

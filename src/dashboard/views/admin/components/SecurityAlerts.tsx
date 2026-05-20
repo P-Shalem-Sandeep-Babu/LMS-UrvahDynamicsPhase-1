@@ -24,10 +24,10 @@ export const SecurityAlerts = () => {
     <motion.div
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="border border-white/10 bg-[#080808] p-6 relative overflow-hidden"
+      className="border border-border bg-card p-6 relative overflow-hidden"
     >
-      <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
-        <h2 className="text-[10px] font-bold uppercase tracking-widest text-white/50 flex items-center gap-2">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-4">
+        <h2 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
           <ShieldAlert className="w-3 h-3" /> Security Feed
         </h2>
       </div>
@@ -41,7 +41,7 @@ export const SecurityAlerts = () => {
                 ? "border-red-500/30"
                 : alert.type === "warning"
                   ? "border-yellow-500/30"
-                  : "border-white/10"
+                  : "border-border"
             }`}
           >
             <div className="mt-0.5">
@@ -56,10 +56,10 @@ export const SecurityAlerts = () => {
               )}
             </div>
             <div>
-              <p className="text-xs font-mono text-white/80 leading-relaxed mb-1">
+              <p className="text-xs font-mono text-foreground/80 leading-relaxed mb-1">
                 {alert.msg}
               </p>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80">
                 {alert.time}
               </span>
             </div>

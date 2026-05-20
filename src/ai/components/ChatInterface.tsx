@@ -61,12 +61,12 @@ export const ChatInterface = () => {
               className={`flex gap-4 max-w-[85%] ${msg.sender === 'user' ? 'ml-auto flex-row-reverse' : ''}`}
             >
               <div className={`w-8 h-8 shrink-0 rounded-none border flex items-center justify-center ${
-                msg.sender === 'ai' ? 'bg-primary/10 border-primary text-primary' : 'bg-white/5 border-white/20 text-white/50'
+                msg.sender === 'ai' ? 'bg-primary/10 border-primary text-primary' : 'bg-foreground/5 border-border/80 text-muted-foreground'
               }`}>
                 {msg.sender === 'ai' ? <BrainCircuit className="w-4 h-4" /> : <User className="w-4 h-4" />}
               </div>
               <div className={`p-4 border text-sm font-mono leading-relaxed ${
-                msg.sender === 'ai' ? 'bg-primary/5 border-primary/20 text-white/80' : 'bg-white/[0.02] border-white/10 text-white/70'
+                msg.sender === 'ai' ? 'bg-primary/5 border-primary/20 text-foreground/80' : 'bg-white/[0.02] border-border text-foreground/70'
               }`}>
                 {msg.isTyping ? (
                   <div className="flex gap-1 items-center h-5 text-primary">
@@ -84,7 +84,7 @@ export const ChatInterface = () => {
         <div ref={messagesEndRef} />
       </div>
 
-      <div className="p-4 border-t border-white/10 bg-black/50 backdrop-blur-md">
+      <div className="p-4 border-t border-border bg-background/50 backdrop-blur-md">
         <div className="flex flex-wrap gap-2 mb-4">
           {suggestedPrompts.map(prompt => (
             <button
@@ -103,17 +103,17 @@ export const ChatInterface = () => {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSend(input)}
             placeholder="INPUT QUERY DIRECTIVE..."
-            className="w-full bg-white/5 border border-white/10 text-white font-mono text-sm px-4 py-4 pr-12 focus:outline-none focus:border-primary/50 transition-colors"
+            className="w-full bg-foreground/5 border border-border text-foreground font-mono text-sm px-4 py-4 pr-12 focus:outline-none focus:border-primary/50 transition-colors"
           />
           <button 
             onClick={() => handleSend(input)}
             disabled={!input.trim()}
-            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-primary transition-colors disabled:opacity-50"
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-muted-foreground hover:text-primary transition-colors disabled:opacity-50"
           >
             <Send className="w-4 h-4" />
           </button>
         </div>
-        <div className="flex items-center gap-2 mt-2 text-[8px] font-mono uppercase tracking-widest text-white/30">
+        <div className="flex items-center gap-2 mt-2 text-[8px] font-mono uppercase tracking-widest text-muted-foreground/60">
           <AlertTriangle className="w-3 h-3" /> System Oracle may produce inaccurate outputs. Verify critical logic.
         </div>
       </div>

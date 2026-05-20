@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Lightbulb, Target, AlertCircle } from "lucide-react";
+import { Lightbulb, Target, AlertCircle, TrendingDown, Activity, FastForward, Brain } from "lucide-react";
 
 export const AIInsights = () => {
   const insights = [
@@ -12,11 +12,49 @@ export const AIInsights = () => {
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="border border-white/10 bg-[#080808] p-6 relative overflow-hidden"
+      className="border border-border bg-card p-6 relative overflow-hidden"
     >
       <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-[60px] pointer-events-none" />
       
-      <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-4 mt-8">
+        <h2 className="text-[10px] font-bold uppercase tracking-widest text-primary flex items-center gap-2">
+           <Activity className="w-3 h-3" /> AI Performance Analysis
+        </h2>
+      </div>
+      
+      <div className="grid grid-cols-2 gap-4 mb-8">
+         <div className="p-4 border border-border bg-white/[0.02]">
+            <h4 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-2">Coding Pace</h4>
+            <div className="text-xl font-black text-foreground">Top 15%</div>
+            <p className="text-[10px] font-mono text-muted-foreground/80 mt-1">Faster than cohort avg</p>
+         </div>
+         <div className="p-4 border border-border bg-white/[0.02]">
+            <h4 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-2">Bug Rate</h4>
+            <div className="text-xl font-black text-foreground">-12%</div>
+            <p className="text-[10px] font-mono text-muted-foreground/80 mt-1">Reduction this week</p>
+         </div>
+      </div>
+
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-4">
+        <h2 className="text-[10px] font-bold uppercase tracking-widest text-primary flex items-center gap-2">
+           <TrendingDown className="w-3 h-3" /> Weak-Topic Detected
+        </h2>
+      </div>
+
+      <div className="p-4 border border-red-500/30 bg-red-500/5 mb-8">
+         <div className="flex justify-between items-center mb-2">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-red-400">Dynamic Programming (2D)</h3>
+            <span className="text-[10px] font-mono text-red-400 border border-red-500/30 px-2 py-0.5">Focus Required</span>
+         </div>
+         <p className="text-xs font-mono text-muted-foreground leading-relaxed mb-4">
+            Analysis shows a 60% failure rate on 2D DP problems in recent contests due to incorrect state definitions.
+         </p>
+         <button className="w-full py-2 bg-red-500/10 border border-red-500/20 text-[10px] font-bold uppercase tracking-widest text-red-400 hover:bg-red-500/20 transition-colors">
+            Generate Practice Sheet
+         </button>
+      </div>
+
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-4">
         <h2 className="text-[10px] font-bold uppercase tracking-widest text-primary flex items-center gap-2">
            <Lightbulb className="w-3 h-3" /> Cognitive Insights
         </h2>
@@ -35,8 +73,8 @@ export const AIInsights = () => {
                }`} />
              </div>
              <div>
-               <h3 className="text-[10px] font-bold uppercase tracking-widest text-white mb-1.5">{insight.title}</h3>
-               <p className="text-xs font-mono text-white/60 leading-relaxed">{insight.text}</p>
+               <h3 className="text-[10px] font-bold uppercase tracking-widest text-foreground mb-1.5">{insight.title}</h3>
+               <p className="text-xs font-mono text-muted-foreground leading-relaxed">{insight.text}</p>
              </div>
           </div>
         ))}

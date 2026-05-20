@@ -24,13 +24,13 @@ export const ProblemManagement = () => {
     <motion.div
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="border border-white/10 bg-[#080808] p-6 relative overflow-hidden"
+      className="border border-border bg-card p-6 relative overflow-hidden"
     >
-      <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
-        <h2 className="text-[10px] font-bold uppercase tracking-widest text-white/50 flex items-center gap-2">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-4">
+        <h2 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
           <FileCode2 className="w-3 h-3" /> Problem Library
         </h2>
-        <button className="text-[10px] font-bold uppercase tracking-widest text-primary hover:text-white transition-colors">
+        <button className="text-[10px] font-bold uppercase tracking-widest text-primary hover:text-foreground transition-colors">
           View All
         </button>
       </div>
@@ -39,10 +39,10 @@ export const ProblemManagement = () => {
         {problems.map((prob, i) => (
           <div
             key={i}
-            className="p-4 border border-white/5 bg-white/[0.02] flex items-start justify-between group hover:border-white/20 transition-colors"
+            className="p-4 border border-border/50 bg-white/[0.02] flex items-start justify-between group hover:border-border/80 transition-colors"
           >
             <div>
-              <div className="text-xs font-bold uppercase tracking-tight text-white mb-2">
+              <div className="text-xs font-bold uppercase tracking-tight text-foreground mb-2">
                 {prob.title}
               </div>
               <div className="flex flex-wrap gap-2">
@@ -60,7 +60,7 @@ export const ProblemManagement = () => {
                 {prob.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-1.5 py-0.5 text-[8px] font-mono text-white/50 border border-white/10 bg-white/5"
+                    className="px-1.5 py-0.5 text-[8px] font-mono text-muted-foreground border border-border bg-foreground/5"
                   >
                     {tag}
                   </span>
@@ -69,8 +69,8 @@ export const ProblemManagement = () => {
             </div>
 
             <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-              <button className="p-2 bg-white/5 hover:bg-white/10 transition-colors border border-white/10">
-                <Edit2 className="w-3 h-3 text-white" />
+              <button className="p-2 bg-foreground/5 hover:bg-foreground/10 transition-colors border border-border">
+                <Edit2 className="w-3 h-3 text-foreground" />
               </button>
               <button className="p-2 bg-primary/10 hover:bg-primary/20 transition-colors border border-primary/20">
                 <Play className="w-3 h-3 text-primary" />

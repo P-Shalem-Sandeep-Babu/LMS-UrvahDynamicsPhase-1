@@ -4,16 +4,16 @@ import { BarChart, Bar, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGri
 
 export const CourseProgressChart = () => {
   return (
-    <div className="col-span-1 border border-white/10 p-6 relative h-full lg:col-span-2 xl:col-span-2 rounded-none bg-gradient-to-b from-[#080808] to-[#050505]">
-      <div className="flex justify-between items-end mb-8 border-b border-white/10 pb-4">
+    <div className="col-span-1 border border-border p-6 relative h-full lg:col-span-2 xl:col-span-2 rounded-none bg-gradient-to-b from-[#080808] to-[#050505]">
+      <div className="flex justify-between items-end mb-8 border-b border-border pb-4">
         <div>
-          <h2 className="text-xs uppercase tracking-widest text-white/50 mb-1">Global Node Data</h2>
-          <div className="text-3xl font-black italic tracking-tighter uppercase text-white">Throughput Analytics</div>
+          <h2 className="text-xs uppercase tracking-widest text-muted-foreground mb-1">Global Node Data</h2>
+          <div className="text-3xl font-black italic tracking-tighter uppercase text-foreground">Throughput Analytics</div>
         </div>
         <div className="flex gap-2">
-           <div className="px-2 py-1 bg-white/5 text-[8px] uppercase tracking-widest text-primary font-bold border border-primary/20">7D</div>
-           <div className="px-2 py-1 text-[8px] uppercase tracking-widest text-white/50 hover:text-white cursor-pointer transition-colors">30D</div>
-           <div className="px-2 py-1 text-[8px] uppercase tracking-widest text-white/50 hover:text-white cursor-pointer transition-colors">YTD</div>
+           <div className="px-2 py-1 bg-foreground/5 text-[8px] uppercase tracking-widest text-primary font-bold border border-primary/20">7D</div>
+           <div className="px-2 py-1 text-[8px] uppercase tracking-widest text-muted-foreground hover:text-foreground cursor-pointer transition-colors">30D</div>
+           <div className="px-2 py-1 text-[8px] uppercase tracking-widest text-muted-foreground hover:text-foreground cursor-pointer transition-colors">YTD</div>
         </div>
       </div>
       <div className="h-[250px] w-full">

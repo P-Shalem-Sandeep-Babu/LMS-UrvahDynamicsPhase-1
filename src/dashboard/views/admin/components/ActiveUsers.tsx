@@ -33,10 +33,10 @@ export const ActiveUsers = () => {
     <motion.div
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="border border-white/10 bg-[#080808] p-6 relative overflow-hidden flex-1"
+      className="border border-border bg-card p-6 relative overflow-hidden flex-1"
     >
-      <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
-        <h2 className="text-[10px] font-bold uppercase tracking-widest text-white/50 flex items-center gap-2">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-4">
+        <h2 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground flex items-center gap-2">
           <Users className="w-3 h-3" /> Live Demographics
         </h2>
         <span className="flex h-2 w-2">
@@ -49,13 +49,13 @@ export const ActiveUsers = () => {
         {users.map((u, i) => (
           <div
             key={i}
-            className="flex justify-between items-center border-b border-white/5 pb-3 last:border-0 last:pb-0"
+            className="flex justify-between items-center border-b border-border/50 pb-3 last:border-0 last:pb-0"
           >
             <div>
-              <p className="text-xs font-bold text-white uppercase tracking-tight">
+              <p className="text-xs font-bold text-foreground uppercase tracking-tight">
                 {u.name}
               </p>
-              <div className="flex gap-2 text-[10px] font-mono text-white/40">
+              <div className="flex gap-2 text-[10px] font-mono text-muted-foreground/80">
                 <span>{u.role}</span>
                 <span>&bull;</span>
                 <span>{u.location}</span>
